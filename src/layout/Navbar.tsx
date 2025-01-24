@@ -1,12 +1,4 @@
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Button,
-  Container,
-  Box,
-} from '@mui/material'
-import Image from 'next/image'
+import { AppBar, Toolbar, Typography, Button, Container } from '@mui/material'
 import Link from 'next/link'
 
 const Navbar = () => {
