@@ -4,7 +4,7 @@
 
 html,
 body {
-  @apply bg-gray-900 text-gray-200;
+  @apply bg-background text-gray-200;
 }
 
 a {

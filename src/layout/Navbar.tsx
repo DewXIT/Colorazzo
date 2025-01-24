@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Navbar = () => {
   return (
-    <AppBar position="sticky" style={{ backgroundColor: '#222222' }}>
+    <AppBar position="fixed" style={{ backgroundColor: '#222222' }}>
       <Container maxWidth="xl">
         <Toolbar
           style={{
