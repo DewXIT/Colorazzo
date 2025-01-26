@@ -8,7 +8,10 @@ interface ColorInputProps {
 
 const ColorInput = ({ baseColor, onChange }: ColorInputProps) => {
   return (
-    <div className="flex w-full justify-center items-center">
+    <div
+      className="flex w-full justify-center items-center"
+      data-testid="color-input"
+    >
       <ColorPicker
         value={baseColor}
         onChange={onChange}
