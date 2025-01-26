@@ -4,7 +4,10 @@ import React from 'react'
 
 const NavbarNavigation: React.FC = () => {
   return (
-    <div style={{ display: 'flex', gap: '1rem' }}>
+    <div
+      style={{ display: 'flex', gap: '1rem' }}
+      data-testid="navbar-navigation"
+    >
       <Link href="/" passHref>
         <NavigationButton label="Home" />
       </Link>

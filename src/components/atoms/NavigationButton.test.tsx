@@ -7,13 +7,13 @@ describe('NavigationButton', () => {
   const Home = 'Home'
   const About = 'About'
 
-  it('renders the GeneratePaletteButton component', () => {
+  it('renders the Home button', () => {
     render(<NavigationButton label={Home} />)
     const buttonElement = screen.getByText(/Home/i)
     expect(buttonElement).toBeInTheDocument()
   })
 
-  it('triggers the export function on button click', () => {
+  it('renders the About button', () => {
     render(<NavigationButton label={About} />)
     const buttonElement = screen.getByText(/About/i)
 
