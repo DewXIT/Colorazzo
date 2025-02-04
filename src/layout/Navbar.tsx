@@ -1,5 +1,5 @@
 import NavbarNavigation from '@/components/molecules/NavbarNavigation'
-import { AppBar, Toolbar, Typography, Button, Container } from '@mui/material'
+import { AppBar, Toolbar, Typography, Container } from '@mui/material'
 
 const Navbar = () => {
   return (

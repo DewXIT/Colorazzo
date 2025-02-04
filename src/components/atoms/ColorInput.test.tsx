@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import ColorInput from './ColorInput'
 import '@testing-library/jest-dom/extend-expect'
 HTMLCanvasElement.prototype.getContext = jest.fn()

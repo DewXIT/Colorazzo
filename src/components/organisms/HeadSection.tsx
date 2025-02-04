@@ -1,14 +1,7 @@
-import ExportButton from '@/components/atoms/ExportButton'
 import Options from '@/components/molecules/Options'
 import { Method } from '@/enums/enums'
 import { ColorObjectType } from '@/types/types'
-import {
-  Typography,
-  FormControl,
-  Select,
-  MenuItem,
-  SelectChangeEvent,
-} from '@mui/material'
+import { Typography, SelectChangeEvent } from '@mui/material'
 import React from 'react'
 
 interface IHeadSectionProps {
