@@ -1,5 +1,5 @@
-import { AppBar, Toolbar, Typography, Button, Container } from '@mui/material'
-import Link from 'next/link'
+import NavbarNavigation from '@/components/molecules/NavbarNavigation'
+import { AppBar, Toolbar, Typography, Container } from '@mui/material'
 
 const Navbar = () => {
   return (
@@ -12,34 +12,8 @@ const Navbar = () => {
             padding: 0,
           }}
         >
-          {/* Logo */}
           <Typography fontFamily={'monospace'}>Colorazzo</Typography>
-
-          {/* Navigation Links */}
-          <div style={{ display: 'flex', gap: '1rem' }}>
-            <Link href="/" passHref>
-              <Button
-                style={{
-                  color: '#e0e0e0',
-                  fontWeight: 'medium',
-                  textTransform: 'none',
-                }}
-              >
-                Home
-              </Button>
-            </Link>
-            <Link href="/about" passHref>
-              <Button
-                style={{
-                  color: '#e0e0e0',
-                  fontWeight: 'medium',
-                  textTransform: 'none',
-                }}
-              >
-                About
-              </Button>
-            </Link>
-          </div>
+          <NavbarNavigation />
         </Toolbar>
       </Container>
     </AppBar>

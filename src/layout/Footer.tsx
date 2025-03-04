@@ -5,7 +5,6 @@ const Footer: React.FC = () => {
     <footer
       className="flex justify-center items-center w-full text-center text-sm"
       style={{
-        bottom: 0,
         padding: 20,
         background: '#1e1e1e',
       }}
