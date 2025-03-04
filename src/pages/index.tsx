@@ -19,7 +19,10 @@ const Home = () => {
   }
 
   return (
-    <Container maxWidth="xl" className="flex flex-col pt-32 pb-32 sm:pb-0">
+    <Container
+      maxWidth="xl"
+      className="flex flex-col pt-32 pb-32 sm:pb-0 mb-16"
+    >
       <Container
         maxWidth="xl"
         className="flex flex-col sm:flex-row justify-between items-center mb-16 gap-8"

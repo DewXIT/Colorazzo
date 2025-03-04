@@ -14,13 +14,7 @@ const PalettePreview = ({ palette }: PalettePreviewProps) => {
       {palette.map(({ shade, color }) => (
         <Grid item xs={6} sm={4} md={3} lg={2} key={shade}>
           <div className="flex flex-row mb-2 gap-4">
-            <Typography
-              variant="body2"
-              style={{
-                fontWeight: 'bold',
-                color: '#bb86fc',
-              }}
-            >
+            <Typography variant="body2" style={typoStyle}>
               {shade}
             </Typography>
             <Typography variant="body2" className="font-mono text-white">
@@ -31,14 +25,7 @@ const PalettePreview = ({ palette }: PalettePreviewProps) => {
             elevation={3}
             style={{
               backgroundColor: color,
-              textAlign: 'center',
-              borderRadius: '8px',
-              height: '120px',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-              boxShadow: '0 4px 10px rgba(0, 0, 0, 0.5)',
+              ...paperStyle,
             }}
           />
         </Grid>
@@ -47,3 +34,19 @@ const PalettePreview = ({ palette }: PalettePreviewProps) => {
   )
 }
 export default PalettePreview
+
+const paperStyle: React.CSSProperties = {
+  textAlign: 'center',
+  borderRadius: '8px',
+  height: '120px',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  boxShadow: '0 4px 10px rgba(0, 0, 0, 0.5)',
+}
+
+const typoStyle: React.CSSProperties = {
+  fontWeight: 'bold',
+  color: '#bb86fc',
+}
