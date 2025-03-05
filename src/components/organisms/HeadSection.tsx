@@ -1,7 +1,7 @@
 import Options from '@/components/molecules/Options'
 import { Method } from '@/enums/enums'
 import { ColorObjectType } from '@/types/types'
-import { Typography, SelectChangeEvent } from '@mui/material'
+import { SelectChangeEvent } from '@mui/material'
 import React from 'react'
 
 interface IHeadSectionProps {

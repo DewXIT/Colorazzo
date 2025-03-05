@@ -5,7 +5,6 @@ import GeneratePaletteSection from '@/components/organisms/GeneratePaletteSectio
 import HeadSection from '@/components/organisms/HeadSection'
 import { ColorObjectType } from '@/types/types'
 import { Method } from '@/enums/enums'
-import Footer from '@/layout/Footer'
 
 const Home = () => {
   const [method, setMethod] = useState<Method>(Method.Default)
