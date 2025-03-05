@@ -5,6 +5,7 @@ import GeneratePaletteSection from '@/components/organisms/GeneratePaletteSectio
 import HeadSection from '@/components/organisms/HeadSection'
 import { ColorObjectType } from '@/types/types'
 import { Method } from '@/enums/enums'
+import Footer from '@/layout/Footer'
 
 const Home = () => {
   const [method, setMethod] = useState<Method>(Method.Default)
@@ -25,10 +26,7 @@ const Home = () => {
   }
 
   return (
-    <Container
-      maxWidth="xl"
-      className="flex flex-col pt-32 pb-32 sm:pb-0 mb-16"
-    >
+    <Container maxWidth="xl" className="flex flex-col pt-10 pb-10 sm:pb-0">
       <HeadSection
         palette={palette}
         method={method}

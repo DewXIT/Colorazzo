@@ -10,20 +10,9 @@ interface IHeadSectionProps {
   onChange: (event: SelectChangeEvent<Method>) => void
 }
 
-const HeadSection: React.FC<IHeadSectionProps> = ({
-  method,
-  palette,
-  onChange,
-}) => {
+const HeadSection = ({ method, palette, onChange }: IHeadSectionProps) => {
   return (
-    <section className="flex flex-col sm:flex-row justify-between items-center mb-16 gap-8">
-      <Typography
-        variant="h3"
-        component="h1"
-        className="text-center sm:text-left font-bold text-gray-200"
-      >
-        Color Palette Generator
-      </Typography>
+    <section className="w-full flex justify-end items-center mb-8 gap-8">
       <Options method={method} palette={palette} onChange={onChange} />
     </section>
   )

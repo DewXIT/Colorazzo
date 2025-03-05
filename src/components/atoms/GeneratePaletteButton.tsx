@@ -10,7 +10,7 @@ const GeneratePaletteButton: React.FC<IGeneratePaletteButtonProps> = ({
     <Button
       onClick={onClick}
       variant="contained"
-      className="mt-6 bg-purple-500 text-black hover:bg-purple-600"
+      className="bg-purple-500 text-black hover:bg-purple-600"
       fullWidth
     >
       Generate Palette

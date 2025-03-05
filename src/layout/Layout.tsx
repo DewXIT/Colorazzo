@@ -1,14 +1,12 @@
 import React, { ReactNode } from 'react'
-import Navbar from './Navbar'
 import Footer from './Footer'
 
 interface LayoutProps {
   children: ReactNode
 }
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
+    <div className="flex flex-col justify-between bg-[#121212] h-full min-h-screen">
       {children}
       <Footer />
     </div>

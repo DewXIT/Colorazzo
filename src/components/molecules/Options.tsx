@@ -16,12 +16,12 @@ interface IOptionsProps {
   onChange: (event: SelectChangeEvent<Method>) => void
 }
 
-const Options: React.FC<IOptionsProps> = ({ method, palette, onChange }) => {
+const Options = ({ method, palette, onChange }: IOptionsProps) => {
   return (
     <div className="flex flex-row gap-4 items-center">
       <FormControl
         size="small"
-        className="bg-transparent rounded-md shadow-md min-w-[160px] "
+        className="bg-transparent rounded-md shadow-md min-w-[160px]"
       >
         <InputLabel id="method-select-label" sx={{ color: '#0b5891' }}>
           Method
@@ -35,26 +35,26 @@ const Options: React.FC<IOptionsProps> = ({ method, palette, onChange }) => {
           className="rounded-md"
           sx={{
             '& .MuiSelect-select': {
-              color: '#0b5891', // Kolor tekstu w Select
+              color: '#0b5891',
             },
             '& .MuiOutlinedInput-notchedOutline': {
-              borderColor: '#0b5891', // Zmiana koloru obramowania
+              borderColor: '#0b5891',
             },
             '&:hover .MuiOutlinedInput-notchedOutline': {
-              borderColor: '#0b5891', // Obramowanie po najechaniu
+              borderColor: '#0b5891',
             },
             '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-              borderColor: '#0b5891', // Obramowanie po kliknięciu
+              borderColor: '#0b5891',
             },
           }}
           MenuProps={{
             PaperProps: {
               sx: {
-                backgroundColor: '#121212', // Tło rozwijanego menu
-                borderColor: '#0b5891', // Kolor obramowania menu
+                backgroundColor: '#121212',
+                borderColor: '#0b5891',
                 border: 1,
                 '& .MuiMenuItem-root:hover': {
-                  backgroundColor: '#0b5891', // Kolor tła po najechaniu
+                  backgroundColor: '#0b5891',
                 },
                 '& .MuiMenuItem-root': {
                   color: '#3498db',
