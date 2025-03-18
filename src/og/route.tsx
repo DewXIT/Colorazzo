@@ -1,8 +1,8 @@
 import { ImageResponse } from 'next/og'
 
 export function GET(request: Request) {
-  let url = new URL(request.url)
-  let title =
+  const url = new URL(request.url)
+  const title =
     url.searchParams.get('title') || 'Colorazzo | Color palette web tool'
 
   return new ImageResponse(
