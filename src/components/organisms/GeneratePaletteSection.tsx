@@ -18,25 +18,21 @@ const GeneratePaletteSection = ({
   onClick,
 }: IGeneratePaletteButtonProps) => {
   return (
-    <section className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8">
+    <section className="grid grid-cols-1 lg:grid-cols-12 gap-6">
       <Card
-        className="w-full md:max-w-[400px] p-16 pt-8 pb-4 shadow-lg "
-        style={{
-          backgroundColor: '#1e1e1e',
-          boxShadow: '0 4px 10px rgba(0, 0, 0, 0.3)',
-        }}
+        className="lg:col-span-5 w-full p-6 sm:p-8 rounded-2xl"
+        style={{ backgroundColor: 'rgba(255,255,255,0.04)' }}
       >
-        <ColorInput baseColor={baseColor} onChange={onChange} />
-        <div className="mt-6">
-          <GeneratePaletteButton onClick={onClick} />
+        <div className="space-y-6">
+          <ColorInput baseColor={baseColor} onChange={onChange} />
+          <div className="pt-2">
+            <GeneratePaletteButton onClick={onClick} />
+          </div>
         </div>
       </Card>
       <Card
-        className="w-full sm:w-auto p-6 shadow-lg"
-        style={{
-          backgroundColor: '#1e1e1e',
-          boxShadow: '0 4px 10px rgba(0, 0, 0, 0.3)',
-        }}
+        className="lg:col-span-7 w-full p-6 sm:p-8 rounded-2xl"
+        style={{ backgroundColor: 'rgba(255,255,255,0.04)' }}
       >
         <PalettePreview palette={palette} />
       </Card>

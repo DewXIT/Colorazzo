@@ -1,4 +1,3 @@
-import ExportButton from '@/components/atoms/ExportButton'
 import { Method } from '@/enums/enums'
 import { ColorObjectType } from '@/types/types'
 import {
@@ -7,6 +6,7 @@ import {
   MenuItem,
   SelectChangeEvent,
   InputLabel,
+  Button,
 } from '@mui/material'
 import React from 'react'
 
@@ -16,14 +16,24 @@ interface IOptionsProps {
   onChange: (event: SelectChangeEvent<Method>) => void
 }
 
+const controlHeight = 40
+
 const Options = ({ method, palette, onChange }: IOptionsProps) => {
+  const exportPalette = () => {
+    const dataStr = `data:text/json;charset=utf-8,${encodeURIComponent(
+      JSON.stringify(palette, null, 2),
+    )}`
+    const a = document.createElement('a')
+    a.setAttribute('href', dataStr)
+    a.setAttribute('download', 'palette.json')
+    a.click()
+    a.remove()
+  }
+
   return (
-    <div className="flex flex-row gap-4 items-center">
-      <FormControl
-        size="small"
-        className="bg-transparent rounded-md shadow-md min-w-[160px]"
-      >
-        <InputLabel id="method-select-label" sx={{ color: '#0b5891' }}>
+    <div className="flex flex-row gap-3 items-center">
+      <FormControl size="small" sx={{ minWidth: 180, height: controlHeight }}>
+        <InputLabel id="method-select-label" sx={{ fontFamily: 'inherit' }}>
           Method
         </InputLabel>
         <Select
@@ -32,34 +42,22 @@ const Options = ({ method, palette, onChange }: IOptionsProps) => {
           label="Method"
           value={method}
           onChange={onChange}
-          className="rounded-md"
           sx={{
-            '& .MuiSelect-select': {
-              color: '#0b5891',
+            height: controlHeight,
+            borderRadius: 1.5,
+            fontFamily: 'inherit',
+            '.MuiSelect-select': {
+              display: 'flex',
+              alignItems: 'center',
+              height: controlHeight,
+              paddingTop: 0,
+              paddingBottom: 0,
+              fontFamily: 'inherit',
             },
-            '& .MuiOutlinedInput-notchedOutline': {
-              borderColor: '#0b5891',
-            },
-            '&:hover .MuiOutlinedInput-notchedOutline': {
-              borderColor: '#0b5891',
-            },
-            '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-              borderColor: '#0b5891',
-            },
-          }}
-          MenuProps={{
-            PaperProps: {
-              sx: {
-                backgroundColor: '#121212',
-                borderColor: '#0b5891',
-                border: 1,
-                '& .MuiMenuItem-root:hover': {
-                  backgroundColor: '#0b5891',
-                },
-                '& .MuiMenuItem-root': {
-                  color: '#3498db',
-                },
-              },
+            '.MuiOutlinedInput-input': {
+              paddingTop: 0,
+              paddingBottom: 0,
+              fontFamily: 'inherit',
             },
           }}
         >
@@ -68,7 +66,14 @@ const Options = ({ method, palette, onChange }: IOptionsProps) => {
           <MenuItem value={Method.LAB}>LAB</MenuItem>
         </Select>
       </FormControl>
-      <ExportButton palette={palette} />
+      <Button
+        onClick={exportPalette}
+        variant="outlined"
+        color="inherit"
+        sx={{ height: controlHeight, borderRadius: 1.5, px: 2.5, fontFamily: 'inherit' }}
+      >
+        Export Palette
+      </Button>
     </div>
   )
 }

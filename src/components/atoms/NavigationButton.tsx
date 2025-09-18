@@ -7,13 +7,7 @@ interface INavigationButtonProps {
 
 const NavigationButton: React.FC<INavigationButtonProps> = ({ label }) => {
   return (
-    <Button
-      style={{
-        color: '#e0e0e0',
-        fontWeight: 'medium',
-        textTransform: 'none',
-      }}
-    >
+    <Button className="text-gray-200 hover:text-white normal-case font-medium">
       {label}
     </Button>
   )

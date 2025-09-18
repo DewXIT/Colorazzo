@@ -9,7 +9,6 @@ const getColorObject = (
   return { shade, color: color.hex() }
 }
 
-// Method Default
 const generateDefaultPalette = (hex: string) => {
   const baseColor = chroma(hex)
   const baseLight = chroma('#ffffff')
@@ -41,7 +40,6 @@ const generateDefaultPalette = (hex: string) => {
   ]
 }
 
-// Method HSL
 const generateHSLPalette = (hex: string) => {
   const baseColor = chroma(hex).hsl()
   const [h, s, l] = baseColor
@@ -60,7 +58,6 @@ const generateHSLPalette = (hex: string) => {
   ]
 }
 
-// Method LAB
 const generateLABPalette = (hex: string) => {
   const baseColor = chroma(hex)
   const baseLight = chroma('white')

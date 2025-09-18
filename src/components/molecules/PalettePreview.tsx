@@ -1,5 +1,5 @@
 import { Grid, Paper, Typography } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 
 interface PalettePreviewProps {
   palette: {
@@ -9,44 +9,50 @@ interface PalettePreviewProps {
 }
 
 const PalettePreview = ({ palette }: PalettePreviewProps) => {
+  const [copied, setCopied] = useState<string | null>(null)
+
+  const handleCopy = async (shade: string, color: string) => {
+    try {
+      await navigator.clipboard.writeText(color)
+      setCopied(shade)
+      setTimeout(() => setCopied(null), 1000)
+    } catch {}
+  }
+
   return (
-    <Grid container spacing={3} style={{ marginTop: '1.5rem' }}>
+    <Grid container spacing={{ xs: 2, sm: 3 }} style={{ marginTop: '0.5rem' }}>
       {palette.map(({ shade, color }) => (
         <Grid item xs={6} sm={4} md={3} lg={2} key={shade}>
-          <div className="flex flex-row mb-2 gap-4">
-            <Typography variant="body2" style={typoStyle}>
-              {shade}
-            </Typography>
-            <Typography variant="body2" className="font-mono text-white">
-              {color}
-            </Typography>
-          </div>
-          <Paper
-            elevation={3}
-            style={{
-              backgroundColor: color,
-              ...paperStyle,
-            }}
-          />
+          <button
+            type="button"
+            onClick={() => handleCopy(shade, color)}
+            className="group w-full text-left"
+            aria-label={`Copy ${color} for shade ${shade}`}
+          >
+            <Paper
+              elevation={0}
+              className="rounded-[14px] border border-white/15 overflow-hidden aspect-[5/6] transition-transform duration-150 group-hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-purple-400/20"
+              style={{
+                backgroundColor: color,
+                backgroundImage:
+                  'radial-gradient(ellipse at top, rgba(255,255,255,0.2), transparent 60%)',
+              }}
+            />
+            <div className="flex items-center justify-between mt-2">
+              <Typography variant="caption" className="text-gray-200 font-medium tracking-wide">
+                {shade}
+              </Typography>
+              <Typography
+                variant="caption"
+                className={`font-mono ${copied === shade ? 'text-emerald-400' : 'text-gray-400'}`}
+              >
+                {copied === shade ? 'Copied' : color}
+              </Typography>
+            </div>
+          </button>
         </Grid>
       ))}
     </Grid>
   )
 }
 export default PalettePreview
-
-const paperStyle: React.CSSProperties = {
-  textAlign: 'center',
-  borderRadius: '8px',
-  height: '120px',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-  boxShadow: '0 4px 10px rgba(0, 0, 0, 0.5)',
-}
-
-const typoStyle: React.CSSProperties = {
-  fontWeight: 'bold',
-  color: '#bb86fc',
-}

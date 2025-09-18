@@ -21,7 +21,7 @@ const ExportButton = ({ palette }: ExportButtonProps) => {
   }
 
   return (
-    <Button onClick={handleExport} variant="contained" color="success">
+    <Button onClick={handleExport} variant="outlined" color="inherit">
       Export Palette
     </Button>
   )

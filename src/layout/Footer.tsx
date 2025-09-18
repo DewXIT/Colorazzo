@@ -1,12 +1,12 @@
-import { Typography } from '@mui/material'
-
 const Footer = () => {
   return (
-    <footer className="py-2 w-full text-center">
-      <Typography variant="body2" style={{ color: '#e0e0e0' }}>
-        Created by <strong>DewXIT Marcin Falkowski</strong>{' '}
-        {new Date().getFullYear()}
-      </Typography>
+    <footer className="mt-10 border-t border-white/10">
+      <div className="mx-auto w-full max-w-7xl px-3 sm:px-4 lg:px-8 py-6">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-400">
+          <p>© 2025 Colorazzo</p>
+          <p>Made by DewXIT</p>
+        </div>
+      </div>
     </footer>
   )
 }
