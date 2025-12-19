@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from 'react'
 import { ColorObjectType } from '@/types/types'
 import { Palette, Waves, Bird, Bot, FileCode, Package, Lightbulb } from 'lucide-react'

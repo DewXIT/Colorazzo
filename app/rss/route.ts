@@ -1,5 +1,7 @@
 const baseUrl = 'https://colorazzo.dewxit.com'
 
+export const runtime = 'edge'
+
 export async function GET() {
   const rssFeed = `<?xml version="1.0" encoding="UTF-8" ?>
   <rss version="2.0">

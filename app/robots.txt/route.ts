@@ -1,3 +1,5 @@
+export const runtime = 'edge'
+
 export async function GET() {
   const robotsTxt = `User-agent: *
 Allow: /

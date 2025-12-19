@@ -1,3 +1,5 @@
+'use client'
+
 import { generateColorPalette } from '@/utils/colorUtils'
 import { useState, useCallback } from 'react'
 import GeneratePaletteSection from '@/components/organisms/GeneratePaletteSection'
@@ -20,7 +22,7 @@ import {
   exportToSCSS,
 } from '@/utils/exportUtils'
 
-const Home = () => {
+export default function Home() {
   const [method, setMethod] = useState<Method>(Method.Default)
   const [baseColor, setBaseColor] = useState<string>('#4f46e5')
   const [palette, setPalette] = useState<ColorObjectType[]>(() =>
@@ -180,5 +182,3 @@ const Home = () => {
     </>
   )
 }
-
-export default Home

@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState, useRef, useEffect } from 'react'
 import { Method } from '@/enums/enums'
 import { Palette, Rainbow, FlaskConical } from 'lucide-react'

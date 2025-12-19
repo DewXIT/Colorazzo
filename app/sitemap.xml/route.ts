@@ -1,3 +1,5 @@
+export const runtime = 'edge'
+
 export async function GET() {
   const baseUrl = 'https://colorazzo.dewxit.com'
   const updated = new Date().toISOString().split('T')[0]
