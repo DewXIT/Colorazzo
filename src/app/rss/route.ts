@@ -1,4 +1,4 @@
-import { baseUrl } from '@/pages/sitemap'
+const baseUrl = 'https://colorazzo.dewxit.com'
 
 export async function GET() {
   const rssFeed = `<?xml version="1.0" encoding="UTF-8" ?>
