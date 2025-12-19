@@ -1,6 +1,6 @@
 import type { GetServerSideProps } from 'next'
 
-const baseUrl = 'https://colorazzo.netlify.app'
+const baseUrl = 'https://colorazzo.dewxit.com'
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   res.setHeader('Content-Type', 'text/plain')

@@ -1,0 +1,21 @@
+{
+  "name": "Colorazzo - Color Palette Generator",
+  "short_name": "Colorazzo",
+  "description": "Generate beautiful, accessible color palettes with just one click. Export to CSS, Tailwind, SCSS and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

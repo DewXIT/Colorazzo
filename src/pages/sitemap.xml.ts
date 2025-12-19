@@ -1,6 +1,6 @@
 import type { GetServerSideProps } from 'next'
 
-const baseUrl = 'https://colorazzo.netlify.app'
+const baseUrl = 'https://colorazzo.dewxit.com'
 
 const generate = () => {
   const updated = new Date().toISOString().split('T')[0]

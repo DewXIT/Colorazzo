@@ -1,4 +1,3 @@
-import { Button } from '@mui/material'
 import React from 'react'
 
 interface INavigationButtonProps {
@@ -7,9 +6,9 @@ interface INavigationButtonProps {
 
 const NavigationButton: React.FC<INavigationButtonProps> = ({ label }) => {
   return (
-    <Button className="text-gray-200 hover:text-white normal-case font-medium">
+    <button className="text-gray-200 hover:text-white font-medium">
       {label}
-    </Button>
+    </button>
   )
 }
 

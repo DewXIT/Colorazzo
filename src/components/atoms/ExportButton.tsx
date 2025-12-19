@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button } from '@mui/material'
 
 interface ExportButtonProps {
   palette: {
@@ -21,9 +20,12 @@ const ExportButton = ({ palette }: ExportButtonProps) => {
   }
 
   return (
-    <Button onClick={handleExport} variant="outlined" color="inherit">
+    <button
+      onClick={handleExport}
+      className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors focus:outline-none focus:ring-4 focus:ring-indigo-400/20"
+    >
       Export Palette
-    </Button>
+    </button>
   )
 }
 
